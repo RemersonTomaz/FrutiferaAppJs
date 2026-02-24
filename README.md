@@ -1,4 +1,3 @@
-organização, responsividade e boa experiência visual.
 
 Conforme conversado previamente com o professor, foram desenvolvidas duas versões do projeto, e a abordagem foi aprovada antes da implementação.
 
