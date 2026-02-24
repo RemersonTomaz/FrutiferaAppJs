@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frutífera Nordestina</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        Frutífera Nordestina
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação">
+        <a class="active" href="index.html">Início</a>
+        <a href="app.html">Plantios Cadastrados</a>
+      </nav>
+
+      <div class="actions">
+        <button id="themeToggle" class="btn btn-ghost icon-btn" type="button" aria-pressed="false" title="Alternar modo escuro">☾</button>
+        <a class="btn btn-primary" href="app.html">+ Cadastrar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-video">
+      
+    <div class="hero-video-bg" aria-hidden="true">
+      <video class="hero-video-el" autoplay muted loop playsinline preload="metadata"
+        poster="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+<div class="container hero-grid">
+        <div>
+          <h1 class="h1">Cadastro simples e organizado de frutíferas</h1>
+          <p class="lead">
+            Registre as espécies da propriedade, acompanhe produção por safra e a idade das plantas em meses.
+            Tudo fica guardado no navegador.
+          </p>
+
+          <div class="actions" style="justify-content:flex-start; gap:.7rem;">
+            <a class="btn btn-primary" href="app.html">Ir para os Cadastros</a>
+            <a class="btn btn-ghost" href="#recursos">Ver recursos</a>
+          </div>
+
+          <div class="pills" aria-label="Recursos rápidos">
+            <span class="pill">ID automático de Cadastros <code>Date.now()</code></span>
+            <span class="pill">Cadastro por janela externa (modal)</span>
+            <span class="pill">Listagem em blocos</span>
+            <span class="pill">Idade em meses</span>
+          </div>
+        </div>
+
+        <div class="card clean" style="overflow:hidden;">
+          <div class="carousel" data-carousel tabindex="0" aria-label="Carrossel de imagens">
+            <div class="carousel-track">
+              <div class="slide">
+                <img alt="Frutas variadas" src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=1600&q=80">
+                <div class="cap">
+                  <h3>Cadastro de espécies</h3>
+                  <p>Nome popular, nome científico e produção por safra.</p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img alt="Plantio" src="https://images.unsplash.com/photo-1524593166156-312f362cada0?auto=format&fit=crop&w=1600&q=80">
+                <div class="cap">
+                  <h3>Data do plantio</h3>
+                  <p>Escolha a data e o sistema calcula a idade em meses.</p>
+                </div>
+              </div>
+
+              <div class="slide">
+                <img alt="Colheita" src="https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?auto=format&fit=crop&w=1600&q=80">
+                <div class="cap">
+                  <h3>Listagem organizada</h3>
+                  <p>Mostra as informações em blocos organizados.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-controls">
+              <button type="button" data-prev aria-label="Anterior">‹</button>
+              <button type="button" data-next aria-label="Próximo">›</button>
+            </div>
+            <div class="carousel-dots" aria-label="Paginação do carrossel"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recursos">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>O que dá para fazer</h2>
+            <p>Uma visão geral das funções do sistema.</p>
+          </div>
+          <a class="btn btn-ghost" href="app.html">Abrir agora →</a>
+        </div>
+
+        <div class="grid-3">
+          <div class="card pad">
+            <div class="kpi">
+              <div class="kicon">＋</div>
+              <div>
+                <h3>Cadastro rápido</h3>
+                <p>O botão de adicionar abre um formulário em janela com os campos essenciais.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <div class="kpi">
+              <div class="kicon">🗂</div>
+              <div>
+                <h3>Organização por cartões</h3>
+                <p>Cada frutífera aparece em um bloco com produção, data de plantio e idade em meses.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <div class="kpi">
+              <div class="kicon">🌙</div>
+              <div>
+                <h3>Modo escuro</h3>
+                <p>Opção de alternar o tema para leitura confortável, com a escolha salva automaticamente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" style="padding-bottom:0;">
+          <div class="grid-3">
+            <div class="card pad">
+              <div class="kpi">
+                <div class="kicon">🔎</div>
+                <div>
+                  <h3>Busca simples</h3>
+                  <p>Filtra por nome popular ou científico para achar rápido o que precisa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card pad">
+              <div class="kpi">
+                <div class="kicon">⏱</div>
+                <div>
+                  <h3>Idade em meses</h3>
+                  <p>A idade é calculada automaticamente usando a data do plantio e a data atual.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card pad">
+              <div class="kpi">
+                <div class="kicon">🧹</div>
+                <div>
+                  <h3>Limpar dados</h3>
+                  <p>Botão para apagar todos os cadastros e recomeçar quando for necessário.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+      <span>© 2026 — Frutífera</span>
+      <span>Atividade Rhavy</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/carousel.js"></script>
+</body>
+</html>

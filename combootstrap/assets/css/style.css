@@ -1,0 +1,54 @@
+:root{
+  --brand: #0b3d2e;     
+  --brand-2: #1f7a5c;    
+  --bg: #eef5f1;        
+  --card-radius: 16px;
+  --shadow: 0 .6rem 1.4rem rgba(11, 61, 46, .18);
+}
+
+.bg-page{
+  background: var(--bg);
+}
+
+.bg-brand{
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+
+.btn-brand{
+  color: #ffffff;
+  border: 0;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  box-shadow: 0 .5rem 1.2rem rgba(31, 122, 92, .30);
+}
+
+
+.btn-brand:hover{
+  filter: brightness(1.05);
+}
+.btn-brand:active{ transform: translateY(0); }
+
+
+.btn-outline-brand{
+  border-color: rgba(11, 61, 46, .60);
+  color: rgba(11, 61, 46, .95);
+}
+
+.btn-outline-brand:hover{
+  background: rgba(31, 122, 92, .10);
+  border-color: rgba(31, 122, 92, .80);
+}
+
+.card, .modal-content{
+  border-radius: var(--card-radius);
+}
+
+.shadow-sm{
+  box-shadow: var(--shadow) !important;
+}
+
+.carousel-fit{ max-height: 340px; }
+.carousel-fit img{ height: 340px; object-fit: cover; }
+
+code{
+  background: rgba(31, 122, 92, .12);
+}

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frutífera Nordestina — Cadastro</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        Frutífera Nordestina
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação">
+        <a href="index.html">Início</a>
+        <a class="active" href="app.html">Plantios Cadastrados</a>
+      </nav>
+
+      <div class="actions">
+        <button id="themeToggle" class="btn btn-ghost icon-btn" type="button" aria-pressed="false" title="Alternar modo escuro">☾</button>
+        <button id="btnAdd" class="btn btn-primary" type="button">+ Cadastrar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <div class="toolbar">
+        <div>
+          <h1>Frutíferas cadastradas</h1>
+          <p class="sub">Cadastro de uma única propriedade. Clique em “Cadastrar” para adicionar.</p>
+        </div>
+
+        <div class="searchbar">
+          <input id="searchInput" class="input" type="text" placeholder="Buscar por nome popular ou científico…">
+          <button id="btnLimparBusca" class="btn btn-ghost" type="button">Limpar busca</button>
+          <button id="btnLimparTudo" class="btn btn-danger" type="button">Limpar tudo</button>
+        </div>
+      </div>
+
+      <div class="section" style="padding-top:1rem;">
+        <div class="grid-3">
+          <div class="card pad">
+            <div class="kpi">
+              <div class="kicon">🌿</div>
+              <div>
+                <h3>Total cadastradas</h3>
+                <p><strong id="kpiTotal">0</strong> frutíferas</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <div class="kpi">
+              <div class="kicon">⚖</div>
+              <div>
+                <h3>Média de produção</h3>
+                <p><strong id="kpiMedia">0.0 kg</strong> por safra</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card pad">
+            <div class="kpi">
+              <div class="kicon">🆕</div>
+              <div>
+                <h3>Mais recente</h3>
+                <p><strong id="kpiMaisRecente">-</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="empty" class="empty" style="display:none;">
+        <div class="big">📌</div>
+        <h2 style="margin:.5rem 0 0;">Nenhuma frutífera cadastrada</h2>
+        <p style="margin:.4rem 0 1rem;">Clique em “Cadastrar” para adicionar a primeira.</p>
+        <button class="btn btn-primary" type="button" id="btnAdd2">+ Cadastrar</button>
+      </div>
+
+      <div id="cards" class="cards" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <!-- modal de cadastro -->
+   <!-- finalizado-->
+  <div id="modalCadastro" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h2 id="modalTitle">Cadastrar frutífera</h2>
+        <button id="modalClose" class="modal-close" type="button" aria-label="Fechar">✕</button>
+      </div>
+
+      <form id="formCadastro">
+        <div class="modal-body">
+          <div id="formAlert" class="alert"></div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="nomePopular">Nome popular</label>
+              <input id="nomePopular" class="input" type="text" placeholder="Exemplo: Abacate" required>
+            </div>
+
+            <div class="field">
+              <label for="nomeCientifico">Nome científico</label>
+              <input id="nomeCientifico" class="input" type="text" placeholder="Ex.: Persea americana" required>
+            </div>
+
+            <div class="field">
+              <label for="producaoMedia">Produção média por safra (kg)</label>
+              <input id="producaoMedia" class="input" type="number" min="0" step="0.01" placeholder="Ex.: 10.3" required>
+            </div>
+
+            <div class="field">
+              <label for="dataPlantio">Data do plantio</label>
+              <input id="dataPlantio" class="input" type="date" required>
+              <div class="hint">O ID é gerado automaticamente com a função <code>Date.now()</code>.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-foot">
+          <button class="btn btn-ghost" type="button" id="btnCancel">Cancelar</button>
+          <button class="btn btn-primary" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- toast -->
+  <!-- finalizado-->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <div class="trow">
+      <div id="toastMsg">Ok.</div>
+      <button id="toastClose" type="button" aria-label="Fechar">×</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+      <span>© 2026 — Frutífera</span>
+      <span>Atividade Rhavy</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const b2 = document.getElementById("btnAdd2");
+      const b1 = document.getElementById("btnAdd");
+      if(b2 && b1) b2.addEventListener("click", () => b1.click());
+    });
+  </script>
+</body>
+</html>
