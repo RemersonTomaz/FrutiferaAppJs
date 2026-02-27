@@ -1,4 +1,6 @@
 
+Atualizado  dia 27/02, Adicionado a versão SEM BOOTSTRAP os comentários!
+
 Conforme conversado previamente com o professor, foram desenvolvidas duas versões do projeto, e a abordagem foi aprovada antes da implementação.
 
 📌 Versões Disponíveis
